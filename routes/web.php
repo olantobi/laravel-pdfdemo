@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/customer/print-pdf', ['as' => 'customer.printpdf',
+                                        'uses' => 'CustomerController@printPdf']);
